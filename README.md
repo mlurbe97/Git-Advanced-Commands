@@ -410,6 +410,13 @@ Temporarily stores (or stashes) the changes you made to the code you're working 
     git config --global push.followTags true
     ```
 
+## SUBMODULES
+
+- Initialize submodules of the repository:
+    ```
+    git submodule update --recursive --init
+    ```
+
 ## USEFUL LINKS
 
 https://onlywei.github.io/explain-git-with-d3/
