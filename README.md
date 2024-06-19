@@ -417,6 +417,15 @@ Temporarily stores (or stashes) the changes you made to the code you're working 
     git submodule update --recursive --init
     ```
 
+- Pull submodules:
+    ```
+    git submodule update --recursive --remote
+    ```
+    or:
+    ```
+    git pull --recurse-submodules
+    ```
+    
 ## USEFUL LINKS
 
 https://onlywei.github.io/explain-git-with-d3/
