@@ -1,5 +1,25 @@
 # Git Advanced Commands
 
+## Author
+
+* Manel Lurbe Sempere (manellurbe@gmail.com)
+
+## Readme Content
+
+<!--ts-->
+* [Content](#Readme-Content)
+    1. [GIT CONFIG FILE AND TOOLS](#GIT-CONFIG-FILE-AND-TOOLS)
+    2. [GIT REMOTES AND BRANCHES](#GIT-REMOTES-AND-BRANCHES)
+    3. [GIT COMMIT AND PUSH TO REMOTE](#GIT-COMMIT-AND-PUSH-TO-REMOTE)
+    4. [GIT LOG, REFLOG AND DIFF](#GIT-LOG,-REFLOG-AND-DIFF)
+    5. [GIT SQUASH AND MERGE](#GIT-SQUASH-AND-MERGE)
+    6. [GIT RESET](#GIT-RESET)
+    7. [GIT REVERT AND REBASE](#GIT-REVERT-AND-REBASE)
+    8. [GIT STASH](#GIT-STASH)
+    9. [GIT TAGS](#GIT-TAGS)
+    10. [GIT SUBMODULES](#GIT-SUBMODULES)
+    11. [USEFUL LINKS](#USEFUL-LINKS)
+
 ## GIT CONFIG FILE AND TOOLS
 
 - Select the default git editor:
@@ -91,7 +111,7 @@
     git config --global credential.helper store
     ```
 
-## MAKE COMMITS AND PUSH TO REMOTE
+## GIT COMMIT AND PUSH TO REMOTE
 
 - Add local changes:
     ```
@@ -210,7 +230,7 @@
     ```
     git fetch origin --prune
     ```
-## SQUASH AND MERGE
+## GIT SQUASH AND MERGE
 
 Squash and merge group some branch commits in one single commit when merge, but dosn't track the branch original commits. Deleting the feature branch will be the best option after squash and merge.
 
@@ -234,7 +254,7 @@ Squash and merge group some branch commits in one single commit when merge, but 
     git config --global fetch.prune true
     ```
 
-## RESET
+## GIT RESET
 
 - Reset an staged files after git add:
     ```
@@ -267,7 +287,7 @@ Squash and merge group some branch commits in one single commit when merge, but 
     git clean -d -x -i
     ```
 
-## REVERT AND REBASE
+## GIT REVERT AND REBASE
 
 When we try to fix a precious commit bug on the master we should go back with hard reset using a branch, solve the bug and then merge into the master. The delete the branch as we do with features.
 
@@ -301,7 +321,7 @@ When we try to fix a precious commit bug on the master we should go back with ha
     git rebase --continue
     ```
 
-## STASH
+## GIT STASH
 
 Temporarily stores (or stashes) the changes you made to the code you're working on so you can work on something else and then come back and reapply the changes later. Saving changes to stashes is convenient if you need to quickly switch contexts to something else, but you're in the middle of a code change and don't have everything ready to commit the changes. Stashes are only locally.
 
@@ -354,7 +374,7 @@ Temporarily stores (or stashes) the changes you made to the code you're working 
     git stash clear
     ```
 
-## TAGS
+## GIT TAGS
 
 - List all repo tags:
     ```
@@ -410,7 +430,7 @@ Temporarily stores (or stashes) the changes you made to the code you're working 
     git config --global push.followTags true
     ```
 
-## SUBMODULES
+## GIT SUBMODULES
 
 - Initialize submodules of the repository:
     ```
