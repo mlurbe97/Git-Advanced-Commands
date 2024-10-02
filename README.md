@@ -445,7 +445,31 @@ Temporarily stores (or stashes) the changes you made to the code you're working 
     ```
     git pull --recurse-submodules
     ```
-    
+
+- Remove a submodule:
+    - Delete the relevant section from the .gitmodules file.
+    - Stage the .gitmodules changes:
+        ```
+        git add .gitmodules
+        ```
+    - Delete the relevant section from .git/config.
+    - Remove the submodule files from the working tree and index (no trailing slash):
+        ```
+        git rm --cached path_to_submodule
+        ```
+    - Remove the submodule's .git directory:
+        ```
+        rm -rf .git/modules/path_to_submodule
+        ```
+    - Commit the changes:
+        ```
+        git commit -m "Removed submodule <name>"
+        ```
+    - Delete the now untracked submodule files:
+        ```
+        rm -rf path_to_submodule
+        ```
+        
 ## USEFUL LINKS
 
 https://onlywei.github.io/explain-git-with-d3/
