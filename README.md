@@ -148,6 +148,11 @@
     git branch -d branchname
     ```
 
+- Force delete a branch:
+    ```
+    git branch -D branchname
+    ```
+
 - Update git commit message
     ```
     git commit --amend
